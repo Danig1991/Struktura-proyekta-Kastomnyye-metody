@@ -8,7 +8,7 @@ PUT_RESOURCE = "/maps/api/place/update/json"
 DELETE_RESOURCE = "/maps/api/place/delete/json"
 
 # ключ
-KEY = "?key=qaclick123"
+KEY = "qaclick123"
 
 # хедерс/куки
 HEADERS = {'Content-Type': 'application/json'}
