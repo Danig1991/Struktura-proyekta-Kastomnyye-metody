@@ -12,7 +12,7 @@ class TestGoogleMapsApi:
 
     @classmethod
     def test_get_place(cls, method="POST"):
-        print(f"\nМетод GET, после {method}")
+        print(f"\nМетод GET, после метода {method}")
         print(f"Запрос по place_id = {cls.place_id}")
         GoogleMapsApi.get_place(cls.place_id)
 
