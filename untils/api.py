@@ -1,13 +1,15 @@
-from configurations.configurations import (
-    BASE_URL,
-    POST_RESOURCE,
-    GET_RESOURCE,
-    PUT_RESOURCE,
-    DELETE_RESOURCE,
-    KEY,
+from configurations.body import (
     body_to_creating_location,
     body_for_location_update,
     body_to_remove_location
+)
+from configurations.path_key import (
+    BASE_URL,
+    POST_RESOURCE,
+    KEY,
+    GET_RESOURCE,
+    PUT_RESOURCE,
+    DELETE_RESOURCE
 )
 from untils.http_methods import HttpMethods
 

@@ -1,6 +1,6 @@
 import requests
 
-from configurations.configurations import HEADERS, COOKIE
+from configurations.path_key import HEADERS, COOKIE
 
 
 class HttpMethods:
