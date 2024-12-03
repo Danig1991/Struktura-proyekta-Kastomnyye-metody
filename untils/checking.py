@@ -19,3 +19,12 @@ class Checking:
         token = json.loads(response.text)
         assert list(token) == expected_value
         print("Все обязательные поля присутствуют!")
+
+    # проверка содержания слова в поле
+    @staticmethod
+    def check_json_search_word_in_value(response: Response, field_name, search_word):
+        check_info = response.json()[field_name]
+        if search_word in check_info:
+            print(f"Слово \"{search_word}\" содержится в поле \"{field_name}\"")
+        else:
+            print(f"Слово \"{search_word}\" не содержится в поле \"{field_name}\"")
