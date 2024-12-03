@@ -1,3 +1,5 @@
+import allure
+
 from configurations.expected_value import (
     MESSAGE,
     STATUS,
@@ -8,10 +10,12 @@ from utils.api import GoogleMapsApi
 from utils.checking import Checking
 
 
+@allure.epic("Тест создания локации")
 class TestGoogleMapsApi:
 
     # тестирование методов api
     @staticmethod
+    @allure.description("Тест создания, получения, обновления, удаления локации")
     def test_methods_api():
         print("\nМетод POST")
         result_post = GoogleMapsApi.create_new_place()

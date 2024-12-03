@@ -1,0 +1,56 @@
+
+Метод POST
+URL для создания локации:
+https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Ответ сервера:
+{'status': 'OK', 'place_id': '53842d4081954807fad21599c76a3734', 'scope': 'APP', 'reference': 'f2a6c20e4c54461f1206e9ee55e49f41f2a6c20e4c54461f1206e9ee55e49f41', 'id': 'f2a6c20e4c54461f1206e9ee55e49f41'}
+Успешно! Статус код = 200
+Все обязательные поля присутствуют!
+Слово "OK" содержится в поле "status"
+
+Метод GET, после метода POST
+URL для получения локации:
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=53842d4081954807fad21599c76a3734
+Ответ сервера:
+{'location': {'latitude': '-38.383494', 'longitude': '33.427362'}, 'accuracy': '50', 'name': 'Frontline house', 'phone_number': '(+91) 983 893 3937', 'address': '29, side layout, cohen 09', 'types': 'shoe park,shop', 'website': 'http://google.com', 'language': 'French-IN'}
+Успешно! Статус код = 200
+Все обязательные поля присутствуют!
+Слово "side layout" содержится в поле "address"
+
+Метод PUT
+URL для обновления локации:
+https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123
+Ответ сервера:
+{'msg': 'Address successfully updated'}
+Успешно! Статус код = 200
+Все обязательные поля присутствуют!
+Слово "successfully" содержится в поле "msg"
+
+Метод GET, после метода PUT
+URL для получения локации:
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=53842d4081954807fad21599c76a3734
+Ответ сервера:
+{'location': {'latitude': '-38.383494', 'longitude': '33.427362'}, 'accuracy': '50', 'name': 'Frontline house', 'phone_number': '(+91) 983 893 3937', 'address': '100 Lenina street, RU', 'types': 'shoe park,shop', 'website': 'http://google.com', 'language': 'French-IN'}
+Успешно! Статус код = 200
+Все обязательные поля присутствуют!
+Слово "Lenina street" содержится в поле "address"
+
+Метод DELETE
+URL для удаления локации:
+https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+Ответ сервера:
+{'status': 'OK'}
+Успешно! Статус код = 200
+Все обязательные поля присутствуют!
+Слово "OK" содержится в поле "status"
+
+Метод GET, после метода DELETE
+URL для получения локации:
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=53842d4081954807fad21599c76a3734
+Ответ сервера:
+{'msg': "Get operation failed, looks like place_id  doesn't exists"}
+Успешно! Статус код = 404
+Все обязательные поля присутствуют!
+Слово "failed" содержится в поле "msg"
+
+Тестирование создания, изменения и удаления новой локации прошло успешно.
