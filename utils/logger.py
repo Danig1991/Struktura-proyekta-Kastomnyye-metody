@@ -1,4 +1,3 @@
-
 import os
 from datetime import datetime
 
@@ -6,13 +5,16 @@ from requests import Response
 
 
 class Logger:
+    # имя для файла
     file_name = f"logs/log_" + str(datetime.now().strftime("%Y-%m-%d_%H-%M-%S")) + ".log"
 
+    # добавить в файл
     @classmethod
     def write_log_to_file(cls, data: str):
         with open(cls.file_name, 'a', encoding='utf=8') as logger_file:
             logger_file.write(data)
 
+    # данные запроса, добавляемые в файл
     @classmethod
     def add_request(cls, url: str, method: str):
         test_name = os.environ.get('PYTEST_CURRENT_TEST')
@@ -26,6 +28,7 @@ class Logger:
 
         cls.write_log_to_file(data_to_add)
 
+    # данные ответа, добавляемые в файл
     @classmethod
     def add_response(cls, result: Response):
         cookies_as_dict = dict(result.cookies)
