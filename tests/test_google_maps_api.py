@@ -4,7 +4,8 @@ from untils.api import GoogleMapsApi
 class TestGoogleMapsApi:
 
     # тестирование методов api
-    def test_methods_api(self):
+    @staticmethod
+    def test_methods_api():
         print("\nМетод POST")
         new_place = GoogleMapsApi.create_new_place()
         place_id = new_place.json()["place_id"]
