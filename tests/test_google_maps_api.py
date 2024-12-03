@@ -30,7 +30,9 @@ class TestGoogleMapsApi:
 
         for test_name, method, *args, status_code, expected_value in tests:
             print(test_name)
+
             result = method(*args)
+
             Checking.check_status_code(response=result, status_code=status_code)
             Checking.check_json_token(response=result, expected_value=expected_value)
 
