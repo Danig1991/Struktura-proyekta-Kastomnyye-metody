@@ -4,8 +4,8 @@ from configurations.expected_value import (
     LOCATION_VALUES,
     VALUES_IN_RESPONSE_POST
 )
-from untils.api import GoogleMapsApi
-from untils.checking import Checking
+from utils.api import GoogleMapsApi
+from utils.checking import Checking
 
 
 class TestGoogleMapsApi:

@@ -11,7 +11,7 @@ from configurations.path_key import (
     PUT_RESOURCE,
     DELETE_RESOURCE
 )
-from untils.http_methods import HttpMethods
+from utils.http_methods import HttpMethods
 
 
 class GoogleMapsApi:
